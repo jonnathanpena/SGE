@@ -194,7 +194,14 @@ export class IngresosComponent implements OnInit {
           }
         );
       } else {
-        this.guardarIngresosDirectos(resp['_body']);
+        //this.guardarIngresosDirectos(resp['_body']);
+        this.alerts.push(
+          {
+            type: 'success',
+            msg: 'Ingreso Nº ' + idingreso + ' Guardado exitoso'
+          }
+        );
+        this.ngOnInit();
       }
     });
   }
